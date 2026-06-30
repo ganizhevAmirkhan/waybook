@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2d5a3d">
+  <title>Читалка — WayBook</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="css/app.css?v=8">
+</head>
+<body class="reader-app">
+  <div class="reader-top" id="reader-top">
+    <div class="reader-header">
+      <button class="back" id="btn-back" title="Назад">←</button>
+      <div class="title" id="book-title">…</div>
+    </div>
+
+    <div class="reader-toolbar" id="toolbar"></div>
+  </div>
+
+  <article class="reader-page">
+    <div class="page-label" id="page-label">Стр. 1</div>
+    <div class="page-body" id="page-body"></div>
+  </article>
+
+  <nav class="reader-nav">
+    <button type="button" id="btn-prev">← Назад</button>
+    <span class="page-num" id="page-num">1 / 1</span>
+    <button type="button" id="btn-next">Вперёд →</button>
+  </nav>
+
+  <script src="js/reader.js?v=8"></script>
+</body>
+</html>

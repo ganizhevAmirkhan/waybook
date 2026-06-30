@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2d5a3d">
+  <title>Админ — WayBook</title>
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body class="admin-app">
+  <header class="app-header">
+    <h1>WayBook — админ</h1>
+    <p>Загрузка книг в библиотеку</p>
+  </header>
+
+  <main class="container admin-container">
+    <section class="admin-panel" id="login-panel">
+      <h2>Вход</h2>
+      <form id="login-form" class="admin-form">
+        <label>Пароль<input type="password" id="password" autocomplete="current-password" required></label>
+        <button type="submit" class="admin-btn">Войти</button>
+        <p class="admin-msg" id="login-msg" hidden></p>
+      </form>
+    </section>
+
+    <section class="admin-panel" id="admin-panel" hidden>
+      <div class="admin-bar">
+        <a href="./index.html">← К библиотеке</a>
+        <button type="button" id="btn-logout" class="admin-btn secondary">Выйти</button>
+      </div>
+
+      <h2>Добавить книгу</h2>
+      <form id="upload-form" class="admin-form">
+        <div class="admin-grid">
+          <label>Раздел
+            <select name="category" id="category" required></select>
+          </label>
+          <label>ID (латиница, напр. ashik-kerib)
+            <input name="id" id="book-id" pattern="[a-z0-9-]+" required placeholder="moya-kniga">
+          </label>
+          <label>Название<input name="title" required></label>
+          <label>Название (инг.)<input name="titleIng"></label>
+          <label>Автор<input name="authorRu"></label>
+          <label>Переводчик<input name="translator"></label>
+          <label>Редактор<input name="editor"></label>
+        </div>
+        <label>Описание<textarea name="description" rows="2"></textarea></label>
+
+        <fieldset class="admin-files">
+          <legend>Файлы</legend>
+          <label>Текст книги (book.txt или .doc) *<input type="file" name="content" accept=".txt,.doc" required></label>
+          <label>PDF (для скачивания и картинок в читалке)<input type="file" name="pdf" accept=".pdf"></label>
+          <label>Word для скачивания (.doc)<input type="file" name="doc" accept=".doc"></label>
+          <label>Обложка (.svg, .png)<input type="file" name="cover" accept=".svg,.png,.jpg,.jpeg,.webp"></label>
+        </fieldset>
+
+        <button type="submit" class="admin-btn" id="btn-upload">Загрузить книгу</button>
+        <p class="admin-msg" id="upload-msg" hidden></p>
+      </form>
+
+      <h2>Книги в каталоге</h2>
+      <ul class="admin-book-list" id="book-list"></ul>
+    </section>
+  </main>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

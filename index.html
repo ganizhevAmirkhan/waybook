@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#2d5a3d">
+  <meta name="description" content="Ингушская цифровая библиотека — сказки, литература, грамматика, религия">
+  <title>WayBook — Г1алг1ай библиотека</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>WayBook</h1>
+    <p>Г1алг1ай библиотека — ингушская цифровая библиотека</p>
+  </header>
+
+  <main class="container">
+    <div class="categories" id="categories"></div>
+    <p class="section-title" id="section-title">Все книги</p>
+    <div class="book-list" id="book-list"></div>
+    <p class="install-hint" id="install-hint" hidden>
+      Установить на телефон или ПК: меню браузера → «Установить приложение»
+    </p>
+    <p class="admin-link"><a href="./admin.html">Админ</a></p>
+  </main>
+
+  <script src="js/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(() => {});
+    }
+  </script>
+</body>
+</html>
