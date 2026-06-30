@@ -1,0 +1,14 @@
+{
+  "id": "ashik-kerib",
+  "category": "skazki",
+  "title": "Ашик-Кериб",
+  "titleIng": "Ашик-Кериб",
+  "authorRu": "М. Ю. Лермонтов",
+  "translator": "С. Озиев",
+  "editor": "Ганижев А. А.",
+  "language": "ing",
+  "files": {
+    "doc": "ashik-kerib.doc",
+    "pdf": "ashik-kerib.pdf"
+  }
+}

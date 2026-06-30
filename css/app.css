@@ -1,0 +1,478 @@
+:root {
+  --bg: #f7f3eb;
+  --card: #fffdf8;
+  --text: #1e1a16;
+  --muted: #6b6358;
+  --accent: #2d5a3d;
+  --accent-light: #e8f0ea;
+  --border: #e0d6c8;
+  --shadow: 0 2px 12px rgba(30, 26, 22, 0.08);
+  --font-ing: Georgia, "Times New Roman", serif;
+  --font-ui: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  line-height: 1.5;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.app-header {
+  background: linear-gradient(135deg, #2d5a3d 0%, #1e3d2a 100%);
+  color: #fff;
+  padding: 1.25rem 1rem 1.5rem;
+  text-align: center;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-family: var(--font-ing);
+  font-size: 1.6rem;
+  font-weight: normal;
+  letter-spacing: 0.04em;
+}
+
+.app-header p {
+  margin: 0.35rem 0 0;
+  opacity: 0.88;
+  font-size: 0.92rem;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.75rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.cat-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 1rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--card);
+  cursor: pointer;
+  font: inherit;
+  color: var(--text);
+  box-shadow: var(--shadow);
+  transition: transform 0.15s, border-color 0.15s;
+}
+
+.cat-btn:hover,
+.cat-btn.active {
+  border-color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.cat-btn .icon {
+  font-size: 1.6rem;
+}
+
+.cat-btn .label {
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.section-title {
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0 0 0.75rem;
+  font-weight: 600;
+}
+
+.book-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.book-card {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  transition: border-color 0.15s;
+}
+
+.book-card:hover {
+  border-color: var(--accent);
+}
+
+.book-cover {
+  width: 56px;
+  height: 72px;
+  border-radius: 6px;
+  background: var(--accent-light);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: var(--font-ing);
+  font-size: 0.7rem;
+  text-align: center;
+  color: var(--accent);
+  padding: 4px;
+  line-height: 1.2;
+}
+
+.book-info h3 {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-ing);
+  font-size: 1.1rem;
+  font-weight: normal;
+}
+
+.book-info .meta {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin-bottom: 0.35rem;
+}
+
+.book-info .desc {
+  font-size: 0.88rem;
+  color: var(--text);
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+  padding: 2rem 1rem;
+}
+
+.install-hint {
+  margin: 1.5rem 0;
+  padding: 0.85rem 1rem;
+  background: var(--accent-light);
+  border-radius: 10px;
+  font-size: 0.88rem;
+  color: var(--accent);
+  text-align: center;
+}
+
+.admin-link {
+  text-align: center;
+  margin: 1rem 0 2rem;
+  font-size: 0.85rem;
+}
+
+.admin-link a {
+  color: var(--muted);
+}
+
+/* Reader */
+.reader-app {
+  min-height: 100vh;
+  padding-top: var(--reader-top-h, 6.5rem);
+  padding-bottom: 4.5rem;
+}
+
+.reader-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(30, 26, 22, 0.06);
+}
+
+.reader-header {
+  padding: 0.65rem 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.reader-header .back {
+  border: none;
+  background: none;
+  font-size: 1.3rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  color: var(--accent);
+}
+
+.reader-header .title {
+  flex: 1;
+  font-family: var(--font-ing);
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reader-toolbar {
+  display: flex;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  padding: 0.5rem 0.75rem;
+  background: var(--card);
+}
+
+.reader-toolbar button,
+.reader-toolbar a.btn {
+  padding: 0.4rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--card);
+  font-size: 0.82rem;
+  cursor: pointer;
+  color: var(--text);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.reader-toolbar button:hover,
+.reader-toolbar a.btn:hover {
+  border-color: var(--accent);
+}
+
+.reader-page {
+  max-width: 42rem;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 5rem;
+}
+
+.page-label {
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.page-body {
+  font-family: var(--font-ing);
+  font-size: 1.05rem;
+  line-height: 1.65;
+  text-align: justify;
+}
+
+.page-body p {
+  margin: 0 0 0.85rem;
+}
+
+.page-figure {
+  margin: 0 0 1rem;
+  text-align: center;
+}
+
+.page-figure img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: var(--shadow);
+}
+
+.reader-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--card);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.reader-nav button {
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.reader-nav button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.reader-nav .page-num {
+  align-self: center;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+
+@media (min-width: 768px) {
+  .app-header h1 {
+    font-size: 2rem;
+  }
+  .reader-app {
+    padding-bottom: 1.5rem;
+  }
+  .reader-page {
+    padding-bottom: 1rem;
+  }
+  .reader-nav {
+    position: static;
+    max-width: 42rem;
+    margin: 0 auto 2rem;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+  }
+}
+
+/* Admin */
+.admin-container {
+  max-width: 640px;
+}
+
+.admin-panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+  margin-bottom: 1.25rem;
+  box-shadow: var(--shadow);
+}
+
+.admin-panel h2 {
+  margin: 0 0 1rem;
+  font-size: 1.1rem;
+  color: var(--accent);
+}
+
+.admin-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.admin-form label {
+  display: block;
+  margin-bottom: 0.75rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.3rem;
+  padding: 0.5rem 0.65rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font: inherit;
+  background: #fff;
+}
+
+.admin-grid {
+  display: grid;
+  gap: 0.75rem;
+}
+
+@media (min-width: 560px) {
+  .admin-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.admin-files {
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin: 1rem 0;
+}
+
+.admin-files legend {
+  padding: 0 0.35rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.admin-btn {
+  padding: 0.55rem 1.1rem;
+  border: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: #fff;
+  font: inherit;
+  cursor: pointer;
+}
+
+.admin-btn.secondary {
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.admin-btn.danger {
+  background: #8b3a3a;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.82rem;
+}
+
+.admin-msg {
+  margin-top: 0.75rem;
+  font-size: 0.88rem;
+}
+
+.admin-msg.ok {
+  color: var(--accent);
+}
+
+.admin-msg.err {
+  color: #8b3a3a;
+}
+
+.admin-book-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.admin-book-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-book-item .meta {
+  display: block;
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: normal;
+}

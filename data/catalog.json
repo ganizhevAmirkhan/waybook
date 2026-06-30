@@ -1,0 +1,31 @@
+{
+  "library": "WayBook",
+  "title": "Г1алг1ай библиотека",
+  "subtitle": "Ингушская цифровая библиотека",
+  "categories": [
+    { "id": "skazki", "title": "Сказки", "icon": "📖" },
+    { "id": "literature", "title": "Литература", "icon": "📚" },
+    { "id": "religion", "title": "Религия", "icon": "☪" },
+    { "id": "grammar", "title": "Грамматика", "icon": "✏" },
+    { "id": "other", "title": "Другое", "icon": "📁" }
+  ],
+  "books": [
+    {
+      "id": "ashik-kerib",
+      "category": "skazki",
+      "title": "Ашик-Кериб",
+      "titleIng": "Ашик-Кериб",
+      "authorRu": "М. Ю. Лермонтов",
+      "translator": "С. Озиев",
+      "editor": "Ганижев А. А.",
+      "description": "Ингушский перевод повести. Цифровая редакция.",
+      "language": "ing",
+      "path": "books/skazki/ashik-kerib",
+      "cover": "books/skazki/ashik-kerib/cover.svg",
+      "files": {
+        "doc": "books/skazki/ashik-kerib/ashik-kerib.doc",
+        "pdf": "books/skazki/ashik-kerib/ashik-kerib.pdf"
+      }
+    }
+  ]
+}

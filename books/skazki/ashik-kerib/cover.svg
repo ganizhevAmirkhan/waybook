@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="160" viewBox="0 0 120 160">
+  <rect width="120" height="160" rx="6" fill="#e8f0ea" stroke="#2d5a3d" stroke-width="2"/>
+  <text x="60" y="88" font-family="Georgia,serif" font-size="14" fill="#2d5a3d" text-anchor="middle">H8:</text>
+  <text x="60" y="108" font-family="Georgia,serif" font-size="12" fill="#2d5a3d" text-anchor="middle">5@81</text>
+</svg>
